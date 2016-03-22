@@ -8,7 +8,7 @@ Install
 -----
 To install the package run the following command:
 ```
-meteor add gfk:autoform-select-transfer
+meteor add gfknl:autoform-select-transfer
 ```
 
 Usage

@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Autoform input type for a transfer select',
   version: '0.0.1',
-  name: 'gfk:autoform-select-transfer'
+  name: 'gfknl:autoform-select-transfer'
 });
 
 Package.onUse(function(api) {
