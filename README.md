@@ -14,4 +14,18 @@ meteor add gfk:autoform-select-transfer
 Usage
 -----
 
-TODO
+```
+{{> afQuickField name='myOption' class='input-sm' type='select-transfer' multiple='true' options=selectTransferOptions}}
+```
+
+```
+Template.x.helpers({
+  selectTransferOptions: function() {
+    return [
+     { label: 'Some label', value: 'Some value'},
+     { label: 'Some label 2', value: 'Some value2'},
+     ...
+    ];
+  }
+});
+```
