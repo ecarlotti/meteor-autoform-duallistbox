@@ -1,5 +1,5 @@
-AutoForm.addInputType("select-transfer", {
-    template: "afSelectTransfer",
+AutoForm.addInputType("duallistbox", {
+    template: "afDualListBox",
     valueIsArray: true,
     valueOut: function () {
         return AutoForm.Utility.getSelectValues(this[0]);
@@ -50,11 +50,11 @@ AutoForm.addInputType("select-transfer", {
     }
 });
 
-Template.afSelectTransfer.onRendered(function () {
+Template.afDualListBox.onRendered(function () {
     this.$('select').bootstrapDualListbox(this.data.atts.bootstrapDualListboxOptions || {});
 });
 
-Template.afSelectTransfer.onDestroyed(function () {
+Template.afDualListBox.onDestroyed(function () {
     try {
         if (this.view && this.view._domrange) {
             this.$('select').bootstrapDualListbox('destroy');

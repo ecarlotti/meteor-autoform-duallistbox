@@ -1,4 +1,4 @@
-meteor-autoform-select-transfer
+meteor-autoform-duallistbox
 =====================
 
 Adds the ability to use a transfer select to Autoform. It uses the
@@ -8,14 +8,14 @@ Install
 -----
 To install the package run the following command:
 ```
-meteor add gfknl:autoform-select-transfer
+meteor add ecarlotti:autoform-duallistbox
 ```
 
 Usage
 -----
 
 ```
-{{> afQuickField name='myOption' class='input-sm' type='select-transfer' multiple='true' options=selectTransferOptions}}
+{{> afQuickField name='myOption' class='input-sm' type='duallistbox' multiple='true' options=selectTransferOptions}}
 ```
 
 ```
