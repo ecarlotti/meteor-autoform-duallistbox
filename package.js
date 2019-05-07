@@ -5,10 +5,10 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0');
-  api.use('templating');
-  api.use('blaze');
-  api.use('aldeed:autoform');
+  api.versionsFrom('1.8.0.2');
+  api.use('templating@1.3.2');
+  api.use('blaze@2.3.3');
+  api.use('aldeed:autoform@6.3.0');
   api.addFiles([
     'lib/bootstrap-duallistbox.css',
     'lib/jquery.bootstrap-duallistbox.js',
