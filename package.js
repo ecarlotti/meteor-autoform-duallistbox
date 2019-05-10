@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Autoform input type for a Bootstrap DualListBox',
-  version: '0.0.1',
+  version: '0.0.3',
   name: 'ecarlotti:autoform-duallistbox'
 });
 

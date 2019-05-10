@@ -50,8 +50,20 @@ AutoForm.addInputType("duallistbox", {
     }
 });
 
+Template.afDualListBox.helpers({
+    atts: function addFormControlAtts() {
+        return _.omit(this.atts, 'bootstrapDualListboxOptions');
+    }
+});
+  
 Template.afDualListBox.onRendered(function () {
     this.$('select').bootstrapDualListbox(this.data.atts.bootstrapDualListboxOptions || {});
+    if (this.data.atts.disabled === "") {
+        $(this.$('select').prevObject.prevObject)
+            .find(".bootstrap-duallistbox-container")
+            .find("*")
+            .prop("disabled",true);
+    }
 });
 
 Template.afDualListBox.onDestroyed(function () {
@@ -61,4 +73,20 @@ Template.afDualListBox.onDestroyed(function () {
         }
     } catch (error) {
     }
+});
+
+/*
+ *  BOOTSTRAP THEME
+ */
+
+Template.afDualListBox.copyAs('afDualListBox_bootstrap3');
+
+// The only difference is that we need to add "form-control" class
+Template.afDualListBox_bootstrap3.helpers({
+  atts: function addFormControlAtts() {
+    var atts = _.omit(this.atts, 'bootstrapDualListboxOptions');
+    // Add bootstrap class
+    atts = AutoForm.Utility.addClass(atts, 'form-control');
+    return atts;
+  }
 });
